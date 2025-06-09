@@ -3,17 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <title>Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .auth-container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.75rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #message {
+      margin-top: 1rem;
+      text-align: center;
+      color: #d8000c;
+      font-weight: 500;
+    }
+
+    .switch-auth {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .switch-auth a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .switch-auth a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <h2>Sign Up</h2>
-  <form id="registerForm">
-    <input type="text" name="username" placeholder="Username" required /><br />
-    <input type="email" name="email" placeholder="Email" required /><br />
-    <input type="password" name="password" placeholder="Password" required /><br />
-    <input type="password" name="confirmPassword" placeholder="Confirm Password" required /><br />
-    <button type="submit">Register</button>
-  </form>
-  <p id="message"></p>
+  <div class="auth-container">
+    <h2>Sign Up</h2>
+    <form id="registerForm">
+      <input type="text" name="username" placeholder="Username" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
+      <button type="submit">Register</button>
+    </form>
+    <p id="message"></p>
+    <div class="switch-auth">
+      Already have an account? <a href="/login.html">Login</a>
+    </div>
+  </div>
 
   <script>
     document.getElementById('registerForm').addEventListener('submit', async (e) => {
@@ -27,6 +110,11 @@
         confirmPassword: form.confirmPassword.value
       };
 
+      if (data.password !== data.confirmPassword) {
+        document.getElementById('message').textContent = "Passwords do not match.";
+        return;
+      }
+
       try {
         const res = await fetch('/api/auth/register', {
           method: 'POST',
@@ -36,13 +124,11 @@
 
         const result = await res.json();
         document.getElementById('message').textContent = result.message || result.error;
-        if (res.ok) {
-            localStorage.setItem('token', result.token); // Save token
-            window.location.href = '/index.html';        // Redirect
-        } else {
-        document.getElementById('message').textContent = result.error;
-        }
 
+        if (res.ok) {
+          localStorage.setItem('token', result.token); // Save token
+          window.location.href = '/index.html';        // Redirect
+        }
       } catch (err) {
         document.getElementById('message').textContent = 'Something went wrong.';
       }

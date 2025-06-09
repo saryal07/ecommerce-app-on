@@ -14,9 +14,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/products', require('./routes/products'));
-
-const favoritesRouter = require('./routes/favorites');
-app.use('/api/favorites', favoritesRouter);
+app.use('/api/favorites', require('./routes/favorites'));
+app.use('/api/admin', require('./routes/admin'));
 
 app.use((req, res) => res.status(404).json({ error: 'Route not found' }));
 

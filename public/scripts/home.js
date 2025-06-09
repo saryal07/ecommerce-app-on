@@ -88,13 +88,18 @@ document.addEventListener('DOMContentLoaded', () => {
       data.products.forEach(p => {
         const card = document.createElement('div');
         card.className = 'product-card';
+
+        const isFav = favoriteIds.includes(p._id);
+
         card.innerHTML = `
-          <img src="${p.image}" alt="${p.name}">
-          <h4>${p.name}</h4>
+          <a href="/product.html?id=${p._id}">
+            <img src="${p.image}" alt="${p.name}">
+            <h4>${p.name}</h4>
+          </a>
           <p>${p.brand} — ${p.type}</p>
           <p>$${p.price}</p>
           <button onclick="toggleFavorite('${p._id}')" id="fav-btn-${p._id}">
-          ${favoriteIds.includes(p._id) ? '💔 Unfavorite' : '❤️ Favorite'}
+            ${isFav ? '💔 Unfavorite' : '❤️ Favorite'}
           </button>
         `;
         productContainer.appendChild(card);
@@ -139,45 +144,62 @@ document.addEventListener('DOMContentLoaded', () => {
     const token = localStorage.getItem('token');
     if (!token) return alert("Please login to favorite");
 
-    let isFav = favoriteIds.includes(id);
+    const isFav = favoriteIds.includes(id);
+    const method = isFav ? 'DELETE' : 'POST'
 
-    const res = await fetch(`/api/favorites/${id}`, {
-      method: isFav ? 'DELETE' : 'POST',
-      headers: { Authorization: `Bearer ${token}` }
+    try {
+      const res = await fetch(`/api/favorites/${id}`, {
+        method,
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
     });
 
-    if (!res.ok) return alert("Failed to update favorite");
-
-    // Re-load favorites list and button states
-    await loadFavorites(true);
-  };
-
-  async function loadFavorites(shouldReloadProducts = false) {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      document.getElementById('favorites-list').innerHTML = '<li>Please login to see favorites</li>';
-      favoriteIds = [];
-      if (shouldReloadProducts) loadProducts(); // still refresh products
+    if (!res.ok) {
+      const err = await res.json();
+      console.error('Favorite failed:', err);
+      alert(`Failed to update favorite: ${err.error}`);
       return;
     }
 
-    const res = await fetch('/api/favorites', {
-      headers: { Authorization: `Bearer ${token}` }
-    });
-
     const data = await res.json();
-    favoriteIds = data.favorites.map(f => f._id); // update global array
+    favoriteIds = data.favorites.map(fav => fav._id);
+
+    loadFavorites();
+    loadProducts();
+
+  } catch (err) {
+    console.error('Fetch error:', err);
+    alert('Something went wrong.');
+  }
+  };
+
+  async function loadFavorites() {
+    const token = localStorage.getItem('token');
+    if (!token) return;
+
+    const res = await fetch('/api/favorites', {
+      headers: { 'Authorization': `Bearer ${token}` }
+    });
+    const data = await res.json();
+    favoriteIds = data.favorites.map(p => p._id);
 
     const list = document.getElementById('favorites-list');
     list.innerHTML = '';
     data.favorites.forEach(p => {
       const li = document.createElement('li');
-      li.textContent = p.name;
+      li.innerHTML = `
+        <img src="${p.image}" alt="${p.name}" style="width: 50px; height: auto; margin-right: 10px;">
+        <span>${p.name}</span>
+        <span><button onclick="toggleFavorite('${p._id}')" id="fav-btn-${p._id}">💔</button></span>
+      `;
+      li.style.display = 'flex';
+      li.style.alignItems = 'center';
       list.appendChild(li);
     });
-
-    if (shouldReloadProducts) loadProducts();
   }
+
 
   prevBtn.addEventListener('click', () => {
     if (page > 1) {

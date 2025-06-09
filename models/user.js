@@ -26,7 +26,8 @@ const userSchema = new mongoose.Schema({
     enum: ['user', 'admin'],
     default: 'user'
   },
-  favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }]
+  favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }],
+  isAdmin: { type: Boolean, default: false }
 });
 
 userSchema.pre('save', async function (next) {

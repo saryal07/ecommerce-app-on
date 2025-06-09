@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Product Details</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <div id="product-detail"></div>
-  <h3>More from this brand</h3>
-  <div id="related-products"></div>
+  <nav>
+    <a href="/">Home</a>
+    <!-- <a href="/login.html" id="login-link">Login</a>
+    <a href="/register.html" id="register-link">Register</a>
+    <a href="#" id="logout-link" style="display: none;">Logout</a> -->
+    <a href="#" id="toggle-favorites">Favorites</a>
+  </nav>
+
+  <main>
+    <section id="product-detail"></section>
+  </main>
+
+  <aside id="favorites-sidebar" class="hidden">
+    <h3>Favorites</h3>
+    <ul id="favorites-list"></ul>
+  </aside>
+
   <script src="/scripts/product.js"></script>
 </body>
 </html>

@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Himalayan Wool Shawl",
+    "brand": "Himalayan",
+    "type": "Clothing",
+    "image": "https://www.primitivetribalcraft.com/cdn/shop/files/il_1140xN.2192114328_u594_1946x.jpg?v=1726870053",
+    "price": 65,
+    "description": "A soft, handwoven wool shawl perfect for cold mountain nights."
+  },
+  {
+    "name": "Himalayan Yak Wool Cap",
+    "brand": "Himalayan",
+    "type": "Accessories",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrMtQZcAAnMfVO5GzZf1pUcAzBpCuPCt4kaQ&s",
+    "price": 28,
+    "description": "Warm and breathable cap made from authentic yak wool."
+  },
+  {
+    "name": "Himalayan Salt Lamp",
+    "brand": "Himalayan",
+    "type": "Home",
+    "image": "https://i.etsystatic.com/10795275/r/il/f235b4/5236728157/il_fullxfull.5236728157_g69g.jpg",
+    "price": 45,
+    "description": "Natural salt lamp to bring calming ambiance and air purification."
+  },
+  {
+    "name": "Himalayan Hemp Backpack",
+    "brand": "Himalayan",
+    "type": "Accessories",
+    "image": "https://m.media-amazon.com/images/I/915lJPnOZML._AC_UY1000_.jpg",
+    "price": 38,
+    "description": "Eco-friendly hemp backpack with hand-embroidered patterns."
+  },
+  {
+    "name": "Himalayan Wool Socks",
+    "brand": "Himalayan",
+    "type": "Clothing",
+    "image": "https://www.marichiworld.com/cdn/shop/products/IMG-20191121-132636--01_1024x1024.jpg?v=1574328467",
+    "price": 22,
+    "description": "Thick, warm socks ideal for trekking or winter lounging."
+  },
+  {
+    "name": "Himalayan Cushion Cover",
+    "brand": "Himalayan",
+    "type": "Home",
+    "image": "https://images.thdstatic.com/productImages/ee8849e8-51d8-47c9-8d05-d55f9ebb4992/svn/throw-pillows-604910yjw-44_600.jpg",
+    "price": 18,
+    "description": "Colorful woven cover for pillows, adds a rustic touch to any room."
+  },
+  {
+    "name": "Everest Insulated Jacket",
+    "brand": "Everest",
+    "type": "Clothing",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNpwg9O9_KgzDrr7G68_gOpL1IXxIkWZohsw&s",
+    "price": 110,
+    "description": "Windproof, thermal jacket designed for high-altitude adventures."
+  },
+  {
+    "name": "Everest Wool Scarf",
+    "brand": "Everest",
+    "type": "Accessories",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq89a8AlZERD9xiyazB57x-qkkcPb2OcilDA&s",
+    "price": 30,
+    "description": "Elegant scarf crafted from Himalayan sheep wool."
+  },
+  {
+    "name": "Everest Wall Tapestry",
+    "brand": "Everest",
+    "type": "Home",
+    "image": "https://m.media-amazon.com/images/I/61XKiWC4IQL._AC_UF894,1000_QL80_.jpg",
+    "price": 60,
+    "description": "Hand-stitched fabric wall art featuring Everest's silhouette."
+  },
+  {
+    "name": "Everest Beaded Bracelet",
+    "brand": "Everest",
+    "type": "Accessories",
+    "image": "https://peyotebird.com/cdn/shop/files/PB23B82.jpg?v=1743109784",
+    "price": 15,
+    "description": "Bracelet with Himalayan stones and traditional beads."
+  },
+  {
+    "name": "Everest Thermal Leggings",
+    "brand": "Everest",
+    "type": "Clothing",
+    "image": "https://www.jack-wolfskin.com/dw/image/v2/AAQL_PRD/on/demandware.static/-/Sites-22021_JW_Master/default/dw9d43171b/large/A60267_1284_9-A190-expdn-octa-pants-m-everest-blue.jpg?sw=1800&sh=2600&sfrm=png&bgcolor=F8F8F4",
+    "price": 35,
+    "description": "Moisture-wicking leggings ideal for alpine climates."
+  },
+  {
+    "name": "Everest Incense Holder",
+    "brand": "Everest",
+    "type": "Home",
+    "image": "https://m.media-amazon.com/images/I/71se5sK8f6L.jpg",
+    "price": 20,
+    "description": "Stone-carved incense stand with engraved mandala patterns."
+  },
+  {
+    "name": "Gorkha Warrior Jacket",
+    "brand": "Gorkha",
+    "type": "Clothing",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTPRQ6Rx-nrthGPtAOS8CGBl7Q--MZ5zHg2Q&s",
+    "price": 95,
+    "description": "Durable jacket inspired by traditional Gorkha military gear."
+  },
+  {
+    "name": "Gorkha Copper Bracelet",
+    "brand": "Gorkha",
+    "type": "Accessories",
+    "image": "https://i.etsystatic.com/21853673/r/il/cae2a5/6242466152/il_570xN.6242466152_bh57.jpg",
+    "price": 19,
+    "description": "Anti-inflammatory bracelet made from pure hammered copper."
+  },
+  {
+    "name": "Gorkha Wooden Mask",
+    "brand": "Gorkha",
+    "type": "Home",
+    "image": "https://d3lmh6vx91lrw8.cloudfront.net/catalog/product/cache/4e00c1fa6e443d8820bb0b489cc7ecae/2/2/22024_ycz0twa35mjyuhpe.jpg",
+    "price": 48,
+    "description": "Hand-carved wall mask representing protective deities."
+  },
+  {
+    "name": "Gorkha Fleece Gloves",
+    "brand": "Gorkha",
+    "type": "Accessories",
+    "image": "https://scandinavianoutdoor.imgix.net/dynamic/productimages/sizes/full/87b57d86-1e96-4e8b-86b1-b5e2dae2884e.jpeg?w=320&h=400&auto=compress,format&trim=auto&trim-sd=1&fit=fill&fill=solid&blend-mode=multiply&blend-color=eeeeee",
+    "price": 24,
+    "description": "Soft, thermal fleece gloves for winter expeditions."
+  },
+  {
+    "name": "Gorkha Canvas Duffel",
+    "brand": "Gorkha",
+    "type": "Accessories",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC6k2T_pFI8aHWKEvw1Shc4R5pgElUUysjRQ&s",
+    "price": 55,
+    "description": "Rugged duffel bag made with heavy-duty canvas and leather straps."
+  },
+  {
+    "name": "Gorkha Wool Throw Blanket",
+    "brand": "Gorkha",
+    "type": "Home",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqJ3CkRHjM8MwIAact_xNbzhFu-GvJBP4KKA&s",
+    "price": 50,
+    "description": "Handwoven wool throw, perfect for couches or beds."
+  },
+  {
+    "name": "Pashmina Shawl Premium",
+    "brand": "Pashmina",
+    "type": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/91b71uiu9EL._AC_UY350_.jpg",
+    "price": 120,
+    "description": "Luxuriously soft pashmina shawl made from Himalayan goat wool."
+  },
+  {
+    "name": "Pashmina Earrings",
+    "brand": "Pashmina",
+    "type": "Accessories",
+    "image": "https://www.voylla.com/cdn/shop/files/VMJAI45802_CS.jpg?v=1723283781",
+    "price": 25,
+    "description": "Handcrafted earrings featuring pashmina-inspired patterns."
+  },
+  {
+    "name": "Pashmina Wall Art",
+    "brand": "Pashmina",
+    "type": "Home",
+    "image": "https://m.media-amazon.com/images/I/813KHieQwQL.jpg",
+    "price": 70,
+    "description": "Delicate wall hanging embroidered with pashmina motifs."
+  },
+  {
+    "name": "Pashmina Wool Poncho",
+    "brand": "Pashmina",
+    "type": "Clothing",
+    "image": "https://m.media-amazon.com/images/I/71OIosc7JOL._AC_UY1000_.jpg",
+    "price": 95,
+    "description": "Comfortable and elegant wool poncho with ethnic prints."
+  },
+  {
+    "name": "Pashmina Jewelry Pouch",
+    "brand": "Pashmina",
+    "type": "Accessories",
+    "image": "https://lovetobag.com/wp-content/uploads/2019/10/Pashmina-Soft-Pouch-Gold-With-Handle_1.jpg",
+    "price": 18,
+    "description": "Mini pouch designed to carry delicate jewelry and keepsakes."
+  },
+  {
+    "name": "Pashmina Cushion Cover Set",
+    "brand": "Pashmina",
+    "type": "Home",
+    "image": "https://www.kuttons.com/cdn/shop/products/HandwovenCottonBohoPillowCoverSet-TuftedDiamondPattern_ThrowPillows-2.jpg?v=1666606509&width=1200",
+    "price": 35,
+    "description": "Set of two embroidered cushion covers with a soft finish."
+  },
+  {
+    "name": "Namaste Linen Kurta",
+    "brand": "Namaste",
+    "type": "Clothing",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Mv18zDk38TSLjGi7baRYxAb3xX6-MWUX6g&s",
+    "price": 48,
+    "description": "Breathable cotton-linen kurta with a minimalistic design."
+  },
+  {
+    "name": "Namaste Prayer Beads",
+    "brand": "Namaste",
+    "type": "Accessories",
+    "image": "https://i.etsystatic.com/7921161/r/il/f40705/4738033605/il_fullxfull.4738033605_79av.jpg",
+    "price": 12,
+    "description": "108-bead mala for meditation and mindfulness."
+  },
+  {
+    "name": "Namaste Singing Bowl",
+    "brand": "Namaste",
+    "type": "Home",
+    "image": "https://www.tenthousandvillages.com/cdn/shop/products/5910160_3_701x700.jpg?v=1729011260",
+    "price": 55,
+    "description": "Brass singing bowl for sound healing and meditation."
+  },
+  {
+    "name": "Namaste Embroidered Scarf",
+    "brand": "Namaste",
+    "type": "Accessories",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLk11M5aVXVy6nZJNdCSSo1RIX81S0sTBPkg&s",
+    "price": 26,
+    "description": "Delicate scarf featuring lotus and mandala embroidery."
+  },
+  {
+    "name": "Namaste Casual Tunic",
+    "brand": "Namaste",
+    "type": "Clothing",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhJoGvMfbUM1R54ozIfpLNCOIZ8j1n3gXyA&s",
+    "price": 42,
+    "description": "Flowy cotton tunic ideal for casual or spiritual wear."
+  },
+  {
+    "name": "Namaste Wall Hanging Banner",
+    "brand": "Namaste",
+    "type": "Home",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR13oqVY2vVeyltzn7v0LRSgaeoU3mpyjvcJw&s",
+    "price": 22,
+    "description": "Canvas banner with Sanskrit mantras for home decor."
+  }
+]
