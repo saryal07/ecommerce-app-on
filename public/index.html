@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop - Home</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/login.html" id="login-link">Login</a>
+    <a href="/register.html" id="register-link">Register</a>
+    <a href="#" id="logout-link" style="display: none;">Logout</a>
+    <a href="#" id="toggle-favorites">Favorites</a>
+  </nav>
+
+  <main>
+    <div id="filters">
+      <h4>Filter by Brand</h4>
+      <div id="brand-filters"></div>
+      <h4>Filter by Type</h4>
+      <div id="type-filters"></div>
+    </div>
+
+    <div>
+      <section id="product-gallery"></section>
+      <div id="pagination">
+        <button id="prev-page">Previous</button>
+        <span id="page-info"></span>
+        <button id="next-page">Next</button>
+      </div>
+    </div>
+  </main>
+
+  <aside id="favorites-sidebar" class="hidden">
+    <h3>Favorites</h3>
+    <ul id="favorites-list"></ul>
+  </aside>
+
+  <script src="/scripts/home.js"></script>
+</body>
+</html>

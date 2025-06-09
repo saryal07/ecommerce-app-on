@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="text" name="usernameOrEmail" placeholder="Username or Email" required /><br />
+    <input type="password" name="password" placeholder="Password" required /><br />
+    <button type="submit">Login</button>
+  </form>
+  <p id="message"></p>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const form = e.target;
+      const data = {
+        usernameOrEmail: form.usernameOrEmail.value,
+        password: form.password.value
+      };
+
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+            localStorage.setItem('token', result.token);
+            window.location.href = '/index.html'; // redirect after login
+        } else {
+            document.getElementById('message').textContent = result.error;
+        }
+
+        document.getElementById('message').textContent = result.message || result.error;
+      } catch (err) {
+        document.getElementById('message').textContent = 'Login failed.';
+      }
+    });
+  </script>
+</body>
+</html>
